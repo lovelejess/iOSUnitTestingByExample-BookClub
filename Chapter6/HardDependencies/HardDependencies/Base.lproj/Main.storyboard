@@ -25,7 +25,7 @@
         <!--Instance Property View Controller-->
         <scene sceneID="PY9-PJ-cCd">
             <objects>
-                <viewController id="Jl7-lj-IPt" customClass="InstancePropertyViewController" customModule="HardDependencies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InstancePropertyViewController" id="Jl7-lj-IPt" customClass="InstancePropertyViewController" customModule="HardDependencies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ykj-K7-k0B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
