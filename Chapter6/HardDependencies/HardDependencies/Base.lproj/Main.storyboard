@@ -40,7 +40,7 @@
         <!--Closure Property View Controller-->
         <scene sceneID="jfO-WH-8si">
             <objects>
-                <viewController id="0uz-ZD-Lzr" customClass="ClosurePropertyViewController" customModule="HardDependencies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClosurePropertyViewController" id="0uz-ZD-Lzr" customClass="ClosurePropertyViewController" customModule="HardDependencies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lW-Zx-say">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
