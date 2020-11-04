@@ -10,6 +10,7 @@ import UIKit
 
 class OverrideViewController: UIViewController {
     #if false
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Analytics.shared.track(event: "viewDidAppear - \(type(of: self))")
@@ -31,4 +32,5 @@ class OverrideViewController: UIViewController {
         super.viewDidAppear(animated)
         analytics().track(event: "viewDidAppear - \(type(of: self))")
     }
+
 }
