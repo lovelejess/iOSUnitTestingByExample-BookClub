@@ -13,6 +13,9 @@
 		0C90229D25537C8F00D817B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C90229B25537C8F00D817B7 /* Main.storyboard */; };
 		0C90229F25537C9000D817B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C90229E25537C9000D817B7 /* Assets.xcassets */; };
 		0C9022A225537C9000D817B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9022A025537C9000D817B7 /* LaunchScreen.storyboard */; };
+		0C9022B925537D6800D817B7 /* OutletConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022B725537D6800D817B7 /* OutletConnectionsViewController.swift */; };
+		0C9022BA25537D6800D817B7 /* OutletConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9022B825537D6800D817B7 /* OutletConnectionsViewController.xib */; };
+		0C9022BC25537E0F00D817B7 /* OutletConnectionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022BB25537E0F00D817B7 /* OutletConnectionsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		0C9022A325537C9000D817B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9022A825537C9000D817B7 /* OutletConnectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutletConnectionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9022AE25537C9000D817B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9022B725537D6800D817B7 /* OutletConnectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsViewController.swift; sourceTree = "<group>"; };
+		0C9022B825537D6800D817B7 /* OutletConnectionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutletConnectionsViewController.xib; sourceTree = "<group>"; };
+		0C9022BB25537E0F00D817B7 /* OutletConnectionsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 				0C90229E25537C9000D817B7 /* Assets.xcassets */,
 				0C9022A025537C9000D817B7 /* LaunchScreen.storyboard */,
 				0C9022A325537C9000D817B7 /* Info.plist */,
+				0C9022B725537D6800D817B7 /* OutletConnectionsViewController.swift */,
+				0C9022B825537D6800D817B7 /* OutletConnectionsViewController.xib */,
 			);
 			path = OutletConnections;
 			sourceTree = "<group>";
@@ -92,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9022AE25537C9000D817B7 /* Info.plist */,
+				0C9022BB25537E0F00D817B7 /* OutletConnectionsViewControllerTests.swift */,
 			);
 			path = OutletConnectionsTests;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 					};
 					0C9022A725537C9000D817B7 = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 						TestTargetID = 0C90229125537C8F00D817B7;
 					};
 				};
@@ -180,6 +190,7 @@
 				0C9022A225537C9000D817B7 /* LaunchScreen.storyboard in Resources */,
 				0C90229F25537C9000D817B7 /* Assets.xcassets in Resources */,
 				0C90229D25537C8F00D817B7 /* Main.storyboard in Resources */,
+				0C9022BA25537D6800D817B7 /* OutletConnectionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +211,7 @@
 				0C90229A25537C8F00D817B7 /* ViewController.swift in Sources */,
 				0C90229625537C8F00D817B7 /* AppDelegate.swift in Sources */,
 				0C90229825537C8F00D817B7 /* SceneDelegate.swift in Sources */,
+				0C9022B925537D6800D817B7 /* OutletConnectionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9022BC25537E0F00D817B7 /* OutletConnectionsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +406,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OutletConnectionsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
@@ -403,6 +417,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.OutletConnectionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutletConnections.app/OutletConnections";
@@ -414,6 +429,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OutletConnectionsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
