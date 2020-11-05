@@ -15,6 +15,9 @@
 		0C9022D62553803500D817B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9022D42553803500D817B7 /* LaunchScreen.storyboard */; };
 		0C9022EC2553818400D817B7 /* StoryboardBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022EB2553818400D817B7 /* StoryboardBasedViewController.swift */; };
 		0C9022EE2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022ED2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift */; };
+		0C9022F12553833600D817B7 /* XIBBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022EF2553833600D817B7 /* XIBBasedViewController.swift */; };
+		0C9022F22553833600D817B7 /* XIBBasedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9022F02553833600D817B7 /* XIBBasedViewController.xib */; };
+		0C9022F42553839200D817B7 /* XIBBasedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022F32553839200D817B7 /* XIBBasedViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		0C9022E22553803500D817B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9022EB2553818400D817B7 /* StoryboardBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBasedViewController.swift; sourceTree = "<group>"; };
 		0C9022ED2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBasedViewControllerTests.swift; sourceTree = "<group>"; };
+		0C9022EF2553833600D817B7 /* XIBBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBBasedViewController.swift; sourceTree = "<group>"; };
+		0C9022F02553833600D817B7 /* XIBBasedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBBasedViewController.xib; sourceTree = "<group>"; };
+		0C9022F32553839200D817B7 /* XIBBasedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBBasedViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,8 @@
 				0C9022D42553803500D817B7 /* LaunchScreen.storyboard */,
 				0C9022D72553803500D817B7 /* Info.plist */,
 				0C9022EB2553818400D817B7 /* StoryboardBasedViewController.swift */,
+				0C9022EF2553833600D817B7 /* XIBBasedViewController.swift */,
+				0C9022F02553833600D817B7 /* XIBBasedViewController.xib */,
 			);
 			path = LoadViewControllers;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				0C9022E22553803500D817B7 /* Info.plist */,
 				0C9022ED2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift */,
+				0C9022F32553839200D817B7 /* XIBBasedViewControllerTests.swift */,
 			);
 			path = LoadViewControllersTests;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9022F22553833600D817B7 /* XIBBasedViewController.xib in Resources */,
 				0C9022D62553803500D817B7 /* LaunchScreen.storyboard in Resources */,
 				0C9022D32553803500D817B7 /* Assets.xcassets in Resources */,
 				0C9022D12553803400D817B7 /* Main.storyboard in Resources */,
@@ -205,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9022CE2553803400D817B7 /* ViewController.swift in Sources */,
+				0C9022F12553833600D817B7 /* XIBBasedViewController.swift in Sources */,
 				0C9022EC2553818400D817B7 /* StoryboardBasedViewController.swift in Sources */,
 				0C9022CA2553803400D817B7 /* AppDelegate.swift in Sources */,
 				0C9022CC2553803400D817B7 /* SceneDelegate.swift in Sources */,
@@ -215,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9022F42553839200D817B7 /* XIBBasedViewControllerTests.swift in Sources */,
 				0C9022EE2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
