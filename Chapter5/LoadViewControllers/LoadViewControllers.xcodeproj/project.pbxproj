@@ -13,6 +13,8 @@
 		0C9022D12553803400D817B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9022CF2553803400D817B7 /* Main.storyboard */; };
 		0C9022D32553803500D817B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9022D22553803500D817B7 /* Assets.xcassets */; };
 		0C9022D62553803500D817B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9022D42553803500D817B7 /* LaunchScreen.storyboard */; };
+		0C9022EC2553818400D817B7 /* StoryboardBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022EB2553818400D817B7 /* StoryboardBasedViewController.swift */; };
+		0C9022EE2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9022ED2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0C9022D72553803500D817B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9022DC2553803500D817B7 /* LoadViewControllersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadViewControllersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9022E22553803500D817B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9022EB2553818400D817B7 /* StoryboardBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBasedViewController.swift; sourceTree = "<group>"; };
+		0C9022ED2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBasedViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				0C9022D22553803500D817B7 /* Assets.xcassets */,
 				0C9022D42553803500D817B7 /* LaunchScreen.storyboard */,
 				0C9022D72553803500D817B7 /* Info.plist */,
+				0C9022EB2553818400D817B7 /* StoryboardBasedViewController.swift */,
 			);
 			path = LoadViewControllers;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9022E22553803500D817B7 /* Info.plist */,
+				0C9022ED2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift */,
 			);
 			path = LoadViewControllersTests;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 					};
 					0C9022DB2553803500D817B7 = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 						TestTargetID = 0C9022C52553803400D817B7;
 					};
 				};
@@ -198,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9022CE2553803400D817B7 /* ViewController.swift in Sources */,
+				0C9022EC2553818400D817B7 /* StoryboardBasedViewController.swift in Sources */,
 				0C9022CA2553803400D817B7 /* AppDelegate.swift in Sources */,
 				0C9022CC2553803400D817B7 /* SceneDelegate.swift in Sources */,
 			);
@@ -207,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9022EE2553820B00D817B7 /* StoryboardBasedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +402,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoadViewControllersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
@@ -403,6 +413,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.LoadViewControllersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoadViewControllers.app/LoadViewControllers";
@@ -414,6 +425,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoadViewControllersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
