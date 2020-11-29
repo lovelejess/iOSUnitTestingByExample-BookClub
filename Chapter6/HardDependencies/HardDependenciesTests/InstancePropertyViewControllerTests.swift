@@ -16,6 +16,12 @@ class InstancePropertyViewControllerTests: XCTestCase {
         let sut: InstancePropertyViewController =
                 storyboard.instantiateViewController(identifier:
                     String(describing: InstancePropertyViewController.self))
+
+        // “The test loads the view controller from the storyboard.
+        // Then it sets the value of the analytics property to an instance different from the singleton.
+        // Notice that it does this before calling loadViewIfNeeded so that the replacement instance is ready before any view controller methods fire.”
+        //
+        // Excerpt From: Jon Reid. “iOS Unit Testing by Example.” Apple Books.
         sut.analytics = Analytics()
         sut.loadViewIfNeeded()
 

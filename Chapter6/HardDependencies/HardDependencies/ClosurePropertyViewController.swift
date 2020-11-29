@@ -9,6 +9,12 @@
 import UIKit
 
 class ClosurePropertyViewController: UIViewController {
+    // “For types where we can’t change the initializer, we can provide closures using property injection. This is necessary for storyboard-based view controllers.”
+    // “Injecting closures gives us a way to extract creation of new instances.
+    // But injecting closures may show that there is a new type trying to break free.
+    // See if you can move the closures into a new type, changing them to methods.”
+    //
+    // Excerpt From: Jon Reid. “iOS Unit Testing by Example.” Apple Books.
     var makeAnalytics: () -> Analytics = { Analytics.shared }
 
     override func viewDidAppear(_ animated: Bool) {

@@ -11,6 +11,10 @@ import UIKit
 class InstanceInitializerViewController: UIViewController {
     private let analytics: Analytics
 
+    // “The initializer parameter has a default value of Analytics.shared.
+    // This lets the view controller set the dependency, unless a call site passes in a different argument.”
+    //
+    // Excerpt From: Jon Reid. “iOS Unit Testing by Example.” Apple Books.
     init(analytics: Analytics = Analytics.shared) {
         self.analytics = analytics
         super.init(nibName: nil, bundle: nil)
