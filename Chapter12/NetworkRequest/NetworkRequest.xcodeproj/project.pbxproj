@@ -14,6 +14,7 @@
 		0CA5A3E025A2CCF000B35200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CA5A3DF25A2CCF000B35200 /* Assets.xcassets */; };
 		0CA5A3E325A2CCF000B35200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA5A3E125A2CCF000B35200 /* LaunchScreen.storyboard */; };
 		0CA5A3F925A2CCF100B35200 /* NetworkRequestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A3F825A2CCF100B35200 /* NetworkRequestUITests.swift */; };
+		0CA5A40D25A2D3E000B35200 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A40C25A2D3E000B35200 /* MockURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0CA5A3F425A2CCF100B35200 /* NetworkRequestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkRequestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA5A3F825A2CCF100B35200 /* NetworkRequestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestUITests.swift; sourceTree = "<group>"; };
 		0CA5A3FA25A2CCF100B35200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CA5A40C25A2D3E000B35200 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA5A3EF25A2CCF000B35200 /* Info.plist */,
+				0CA5A40C25A2D3E000B35200 /* MockURLSession.swift */,
 			);
 			path = NetworkRequestTests;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 					};
 					0CA5A3E825A2CCF000B35200 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = 0CA5A3D225A2CCEE00B35200;
 					};
 					0CA5A3F325A2CCF100B35200 = {
@@ -265,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA5A40D25A2D3E000B35200 /* MockURLSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +473,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkRequestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -478,6 +484,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.NetworkRequestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkRequest.app/NetworkRequest";
@@ -489,6 +496,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkRequestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
