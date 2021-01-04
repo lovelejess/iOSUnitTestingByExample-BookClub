@@ -7,9 +7,13 @@
 
 import UIKit
 
+protocol URLSessionProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
 class ViewController: UIViewController {
     private var dataTask: URLSessionDataTask?
-    var session = URLSession.shared
+    var session: URLSessionProtocol = URLSession.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,4 +47,6 @@ class ViewController: UIViewController {
         searchForBook(terms: "out from boneville")
     }
 }
+
+extension URLSession: URLSessionProtocol {}
 
