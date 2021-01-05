@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		0CC2812A25A40FF4007CB584 /* SpyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2812925A40FF4007CB584 /* SpyURLSession.swift */; };
 		0CC2812F25A41171007CB584 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2812E25A41171007CB584 /* ViewControllerTests.swift */; };
 		0CC2813725A412EA007CB584 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2813625A412EA007CB584 /* TestHelpers.swift */; };
+		0CC2813C25A41EFE007CB584 /* ViewControllerPresentationSpy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC2813B25A41EFE007CB584 /* ViewControllerPresentationSpy.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0CC2812925A40FF4007CB584 /* SpyURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyURLSession.swift; sourceTree = "<group>"; };
 		0CC2812E25A41171007CB584 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		0CC2813625A412EA007CB584 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		0CC2813B25A41EFE007CB584 /* ViewControllerPresentationSpy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ViewControllerPresentationSpy.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC2813C25A41EFE007CB584 /* ViewControllerPresentationSpy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0CC2810925A3F2A5007CB584 /* Info.plist */,
+				0CC2813B25A41EFE007CB584 /* ViewControllerPresentationSpy.framework */,
 				0CC2812925A40FF4007CB584 /* SpyURLSession.swift */,
 				0CC2812E25A41171007CB584 /* ViewControllerTests.swift */,
 				0CC2813625A412EA007CB584 /* TestHelpers.swift */,
@@ -483,6 +487,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetworkResponseTests",
+				);
 				INFOPLIST_FILE = NetworkResponseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,6 +514,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetworkResponseTests",
+				);
 				INFOPLIST_FILE = NetworkResponseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (

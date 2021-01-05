@@ -6,14 +6,17 @@
 //
 
 @testable import NetworkResponse
+import ViewControllerPresentationSpy
 import XCTest
 
 class ViewControllerTests: XCTestCase {
+    private var alertVerifier: AlertVerifier!
     private var sut: ViewController!
     private var spyURLSession: SpyURLSession!
     
     override func setUp() {
         super.setUp()
+        alertVerifier = AlertVerifier()
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(identifier: String(describing: ViewController.self))
         spyURLSession = SpyURLSession()
@@ -22,6 +25,7 @@ class ViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
+        alertVerifier = nil
         sut = nil
         spyURLSession = nil
         super.tearDown()
