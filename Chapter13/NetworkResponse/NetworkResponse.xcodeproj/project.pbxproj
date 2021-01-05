@@ -18,6 +18,7 @@
 		0CC2812F25A41171007CB584 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2812E25A41171007CB584 /* ViewControllerTests.swift */; };
 		0CC2813725A412EA007CB584 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2813625A412EA007CB584 /* TestHelpers.swift */; };
 		0CC2813C25A41EFE007CB584 /* ViewControllerPresentationSpy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC2813B25A41EFE007CB584 /* ViewControllerPresentationSpy.framework */; platformFilter = ios; };
+		0CC2814425A42042007CB584 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2814325A42042007CB584 /* TestError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0CC2812E25A41171007CB584 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		0CC2813625A412EA007CB584 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0CC2813B25A41EFE007CB584 /* ViewControllerPresentationSpy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ViewControllerPresentationSpy.framework; sourceTree = "<group>"; };
+		0CC2814325A42042007CB584 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				0CC2812925A40FF4007CB584 /* SpyURLSession.swift */,
 				0CC2812E25A41171007CB584 /* ViewControllerTests.swift */,
 				0CC2813625A412EA007CB584 /* TestHelpers.swift */,
+				0CC2814325A42042007CB584 /* TestError.swift */,
 			);
 			path = NetworkResponseTests;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC2814425A42042007CB584 /* TestError.swift in Sources */,
 				0CC2812F25A41171007CB584 /* ViewControllerTests.swift in Sources */,
 				0CC2812A25A40FF4007CB584 /* SpyURLSession.swift in Sources */,
 				0CC2813725A412EA007CB584 /* TestHelpers.swift in Sources */,
