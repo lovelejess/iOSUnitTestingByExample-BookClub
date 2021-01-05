@@ -28,9 +28,11 @@ class ViewController: UIViewController {
     
     private(set) var results: [SearchResult] = [] {
         didSet {
-            print(results)
+            handleResults(results)
         }
     }
+    
+    var handleResults: ([SearchResult]) -> Void = { print($0) }
     
     @IBOutlet private(set) var button: UIButton!
     

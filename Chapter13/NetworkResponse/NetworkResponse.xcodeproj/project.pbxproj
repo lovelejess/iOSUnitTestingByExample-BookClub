@@ -15,6 +15,8 @@
 		0CC280FD25A3F2A5007CB584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC280FB25A3F2A5007CB584 /* LaunchScreen.storyboard */; };
 		0CC2811325A3F2A5007CB584 /* NetworkResponseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2811225A3F2A5007CB584 /* NetworkResponseUITests.swift */; };
 		0CC2812A25A40FF4007CB584 /* SpyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2812925A40FF4007CB584 /* SpyURLSession.swift */; };
+		0CC2812F25A41171007CB584 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2812E25A41171007CB584 /* ViewControllerTests.swift */; };
+		0CC2813725A412EA007CB584 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2813625A412EA007CB584 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0CC2811225A3F2A5007CB584 /* NetworkResponseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseUITests.swift; sourceTree = "<group>"; };
 		0CC2811425A3F2A5007CB584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC2812925A40FF4007CB584 /* SpyURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyURLSession.swift; sourceTree = "<group>"; };
+		0CC2812E25A41171007CB584 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		0CC2813625A412EA007CB584 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			children = (
 				0CC2810925A3F2A5007CB584 /* Info.plist */,
 				0CC2812925A40FF4007CB584 /* SpyURLSession.swift */,
+				0CC2812E25A41171007CB584 /* ViewControllerTests.swift */,
+				0CC2813625A412EA007CB584 /* TestHelpers.swift */,
 			);
 			path = NetworkResponseTests;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC2812F25A41171007CB584 /* ViewControllerTests.swift in Sources */,
 				0CC2812A25A40FF4007CB584 /* SpyURLSession.swift in Sources */,
+				0CC2813725A412EA007CB584 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
