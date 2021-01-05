@@ -13,8 +13,8 @@
 		0CC280F825A3F2A3007CB584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC280F625A3F2A3007CB584 /* Main.storyboard */; };
 		0CC280FA25A3F2A5007CB584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC280F925A3F2A5007CB584 /* Assets.xcassets */; };
 		0CC280FD25A3F2A5007CB584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC280FB25A3F2A5007CB584 /* LaunchScreen.storyboard */; };
-		0CC2810825A3F2A5007CB584 /* NetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2810725A3F2A5007CB584 /* NetworkResponseTests.swift */; };
 		0CC2811325A3F2A5007CB584 /* NetworkResponseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2811225A3F2A5007CB584 /* NetworkResponseUITests.swift */; };
+		0CC2812A25A40FF4007CB584 /* SpyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC2812925A40FF4007CB584 /* SpyURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +44,11 @@
 		0CC280FC25A3F2A5007CB584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CC280FE25A3F2A5007CB584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC2810325A3F2A5007CB584 /* NetworkResponseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkResponseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CC2810725A3F2A5007CB584 /* NetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseTests.swift; sourceTree = "<group>"; };
 		0CC2810925A3F2A5007CB584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC2810E25A3F2A5007CB584 /* NetworkResponseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkResponseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC2811225A3F2A5007CB584 /* NetworkResponseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseUITests.swift; sourceTree = "<group>"; };
 		0CC2811425A3F2A5007CB584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CC2812925A40FF4007CB584 /* SpyURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 		0CC2810625A3F2A5007CB584 /* NetworkResponseTests */ = {
 			isa = PBXGroup;
 			children = (
-				0CC2810725A3F2A5007CB584 /* NetworkResponseTests.swift */,
 				0CC2810925A3F2A5007CB584 /* Info.plist */,
+				0CC2812925A40FF4007CB584 /* SpyURLSession.swift */,
 			);
 			path = NetworkResponseTests;
 			sourceTree = "<group>";
@@ -198,6 +198,7 @@
 					};
 					0CC2810225A3F2A5007CB584 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = 0CC280EC25A3F2A3007CB584;
 					};
 					0CC2810D25A3F2A5007CB584 = {
@@ -268,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC2810825A3F2A5007CB584 /* NetworkResponseTests.swift in Sources */,
+				0CC2812A25A40FF4007CB584 /* SpyURLSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +473,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkResponseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -482,6 +484,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.NetworkResponseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkResponse.app/NetworkResponse";
@@ -493,6 +496,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkResponseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
