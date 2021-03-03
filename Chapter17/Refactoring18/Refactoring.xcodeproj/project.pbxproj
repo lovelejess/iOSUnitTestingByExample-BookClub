@@ -21,6 +21,7 @@
 		0C100BAC25EF4D93007E269E /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BAB25EF4D93007E269E /* MockPasswordChanger.swift */; };
 		0C100BB125EF4E22007E269E /* ChangePasswordViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BB025EF4E22007E269E /* ChangePasswordViewControllerTests.swift */; };
 		0C100BB625EF5000007E269E /* ChangePasswordViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BB525EF5000007E269E /* ChangePasswordViewControllerSnapshotTests.swift */; };
+		0C100BC125EF51E6007E269E /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BC025EF51E6007E269E /* ChangePasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		0C100BAB25EF4D93007E269E /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 		0C100BB025EF4E22007E269E /* ChangePasswordViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerTests.swift; sourceTree = "<group>"; };
 		0C100BB525EF5000007E269E /* ChangePasswordViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		0C100BC025EF51E6007E269E /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				0C100B7725EF478A007E269E /* Info.plist */,
 				0C100B9C25EF4AD4007E269E /* PasswordChanger.swift */,
 				0C100BA125EF4B55007E269E /* ChangePasswordViewController.swift */,
+				0C100BC025EF51E6007E269E /* ChangePasswordViewModel.swift */,
 			);
 			path = Refactoring;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C100B6E25EF4786007E269E /* ViewController.swift in Sources */,
+				0C100BC125EF51E6007E269E /* ChangePasswordViewModel.swift in Sources */,
 				0C100B6A25EF4786007E269E /* AppDelegate.swift in Sources */,
 				0C100B6C25EF4786007E269E /* SceneDelegate.swift in Sources */,
 				0C100BA225EF4B55007E269E /* ChangePasswordViewController.swift in Sources */,

@@ -18,8 +18,22 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         sut = storyboard.instantiateViewController(
-                identifier: String(
-                        describing: ChangePasswordViewController.self))
+                identifier: String(describing: ChangePasswordViewController.self))
+        #if false
+        sut.viewModel = ChangePasswordViewModel()
+        #endif
+        sut.viewModel = ChangePasswordViewModel(
+                title: "Change Password",
+                oldPasswordPlaceholder: "Current Password",
+                newPasswordPlaceholder: "New Password",
+                confirmPasswordPlaceholder: "Confirm New Password",
+                submitButtonLabel: "Submit",
+                enterNewPasswordMessage: "Please enter a new password.",
+                newPasswordTooShortMessage: "The new password should have at least 6 characters.",
+                confirmationPasswordDoesNotMatchMessage: "The new password and the confirmation password donâ€™t match. Please try again.",
+                successMessage: "Your password has been successfully changed.",
+                okButtonLabel: "OK"
+                )
         passwordChanger = MockPasswordChanger()
         sut.passwordChanger = passwordChanger
         alertVerifier = AlertVerifier()
@@ -47,11 +61,11 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     func test_navigationBar_shouldHaveTitle() {
         XCTAssertEqual(sut.navigationBar.topItem?.title, "Change Password")
     }
-
+    
     func test_cancelBarButton_shouldBeSystemItemCancel() {
         XCTAssertEqual(systemItem(for: sut.cancelBarButton), .cancel)
     }
-
+    
     func test_oldPasswordTextField_shouldHavePlaceholder() {
         XCTAssertEqual(sut.oldPasswordTextField.placeholder, "Current Password")
     }
@@ -83,7 +97,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         XCTAssertTrue(textField.isSecureTextEntry, "isSecureTextEntry")
         XCTAssertTrue(textField.enablesReturnKeyAutomatically, "enablesReturnKeyAutomatically")
     }
-
+    
     func test_confirmPasswordTextField_shouldHavePasswordAttributes() {
         let textField = sut.confirmPasswordTextField!
         XCTAssertEqual(textField.textContentType, .newPassword, "textContentType")
@@ -92,7 +106,10 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     }
 
     func test_tappingCancel_withFocusOnOldPassword_shouldResignThatFocus() {
+        #if false
         putFocusOn(textField: sut.oldPasswordTextField)
+        #endif
+        putFocusOn(.oldPassword)
         XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder, "precondition")
 
         tap(sut.cancelBarButton)
@@ -101,7 +118,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     }
 
     func test_tappingCancel_withFocusOnNewPassword_shouldResignThatFocus() {
-        putFocusOn(textField: sut.newPasswordTextField)
+        putFocusOn(.newPassword)
         XCTAssertTrue(sut.newPasswordTextField.isFirstResponder, "precondition")
 
         tap(sut.cancelBarButton)
@@ -110,7 +127,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     }
 
     func test_tappingCancel_withFocusOnConfirmPassword_shouldResignThatFocus() {
-        putFocusOn(textField: sut.confirmPasswordTextField)
+        putFocusOn(.confirmPassword)
         XCTAssertTrue(sut.confirmPasswordTextField.isFirstResponder, "precondition")
 
         tap(sut.cancelBarButton)
@@ -122,7 +139,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         let dismissalVerifier = DismissalVerifier()
 
         tap(sut.cancelBarButton)
-
+        
         dismissalVerifier.verify(animated: true, dismissedViewController: sut)
     }
 
@@ -162,8 +179,8 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
         verifyAlertPresented(message: "Please enter a new password.")
     }
-
-    func test_tappingOKPasswordBlankAlert_shouldPutFocusOnNewPassword() throws {
+    
+    func test_tappingOKInPasswordBlankAlert_shouldPutFocusOnNewPassword() throws {
         setUpValidPasswordEntries()
         sut.newPasswordTextField.text = ""
         tap(sut.submitButton)
@@ -268,9 +285,9 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
     }
 
-    func test_tappingSubmit_withValidFieldsFocusedOnOldPassword_resignsFocus() {
+    func test_tappingSubmit_withValidFieldsFocusedOnOldPassword_shouldResignFocus() {
         setUpValidPasswordEntries()
-        putFocusOn(textField: sut.oldPasswordTextField)
+        putFocusOn(.oldPassword)
         XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder, "precondition")
 
         tap(sut.submitButton)
@@ -280,7 +297,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
     func test_tappingSubmit_withValidFieldsAndFocusOnNewPassword_shouldResignThatFocus() {
         setUpValidPasswordEntries()
-        putFocusOn(textField: sut.newPasswordTextField)
+        putFocusOn(.newPassword)
         XCTAssertTrue(sut.newPasswordTextField.isFirstResponder, "precondition")
 
         tap(sut.submitButton)
@@ -290,7 +307,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
     func test_tappingSubmit_withValidFieldsAndFocusOnConfirmPassword_shouldResignThatFocus() {
         setUpValidPasswordEntries()
-        putFocusOn(textField: sut.confirmPasswordTextField)
+        putFocusOn(.confirmPassword)
         XCTAssertTrue(sut.confirmPasswordTextField.isFirstResponder, "precondition")
 
         tap(sut.submitButton)
@@ -312,7 +329,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         XCTAssertNil(sut.blurView.superview, "precondition")
 
         tap(sut.submitButton)
-
+        
         XCTAssertNotNil(sut.blurView.superview)
     }
 
@@ -321,7 +338,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         XCTAssertNil(sut.activityIndicator.superview, "precondition")
 
         tap(sut.submitButton)
-
+        
         XCTAssertNotNil(sut.activityIndicator.superview)
     }
 
@@ -350,6 +367,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         sut.confirmPasswordTextField.text = sut.newPasswordTextField.text
 
         tap(sut.submitButton)
+        
         passwordChanger.verifyChange(
                 securityToken: "TOKEN",
                 oldPassword: "OLD456",
@@ -361,7 +379,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         setUpValidPasswordEntries()
         tap(sut.submitButton)
         XCTAssertTrue(sut.activityIndicator.isAnimating, "precondition")
-
+        
         passwordChanger.changeCallSuccess()
 
         XCTAssertFalse(sut.activityIndicator.isAnimating)
@@ -371,7 +389,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         setUpValidPasswordEntries()
         tap(sut.submitButton)
         XCTAssertNotNil(sut.activityIndicator.superview, "precondition")
-
+        
         passwordChanger.changeCallSuccess()
 
         XCTAssertNil(sut.activityIndicator.superview)
@@ -396,7 +414,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
         XCTAssertFalse(sut.activityIndicator.isAnimating)
     }
-
+    
     func test_changePasswordSuccess_shouldShowSuccessAlert() {
         setUpValidPasswordEntries()
         tap(sut.submitButton)
@@ -414,7 +432,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         let dismissalVerifier = DismissalVerifier()
 
         try alertVerifier.executeAction(forButton: "OK")
-
+        
         dismissalVerifier.verify(animated: true, dismissedViewController: sut)
     }
 
@@ -470,7 +488,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
         XCTAssertNil(sut.blurView.superview)
     }
-
+    
     func test_tappingOKInFailureAlert_shouldEnableCancelBarButton() throws {
         showPasswordChangeFailureAlert()
         XCTAssertFalse(sut.cancelBarButton.isEnabled, "precondition")
@@ -497,7 +515,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.confirmPasswordTextField.delegate,
                 "confirmPasswordTextField")
     }
-
+    
     func test_hittingReturnFromOldPassword_shouldPutFocusOnNewPassword() {
         putInViewHierarchy(sut)
 
@@ -535,7 +553,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
         passwordChanger.verifyChangeNeverCalled()
     }
-
+    
     func test_hittingReturnFromNewPassword_shouldNotRequestPasswordChange() {
         setUpValidPasswordEntries()
 
@@ -561,10 +579,10 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         sut.newPasswordTextField.text = "123456"
         sut.confirmPasswordTextField.text = "abcdef"
     }
-
-    private func putFocusOn(textField: UITextField) {
+    
+    private func putFocusOn(_ inputFocus: ChangePasswordViewModel.InputFocus) {
         putInViewHierarchy(sut)
-        textField.becomeFirstResponder()
+        sut.viewModel.inputFocus = inputFocus
     }
 
     private func verifyAlertPresented(

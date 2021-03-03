@@ -23,7 +23,7 @@
                                 </constraints>
                                 <state key="normal" title="Change My Password"/>
                                 <connections>
-                                    <segue destination="3mR-sE-Qm6" kind="presentation" id="1YX-Tb-Uz3"/>
+                                    <segue destination="3mR-sE-Qm6" kind="presentation" identifier="changePassword" id="1YX-Tb-Uz3"/>
                                 </connections>
                             </button>
                         </subviews>
