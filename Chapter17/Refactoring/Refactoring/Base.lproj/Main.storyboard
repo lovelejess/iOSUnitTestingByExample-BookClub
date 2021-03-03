@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Password View Controller-->
         <scene sceneID="kdU-dS-G8t">
             <objects>
-                <viewController id="3mR-sE-Qm6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="3mR-sE-Qm6" customClass="ChangePasswordViewController" customModule="Refactoring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCq-Pm-7Wx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +107,14 @@
                             <constraint firstItem="NJm-71-uN6" firstAttribute="top" secondItem="RlI-I3-I0C" secondAttribute="top" id="umf-qR-lIo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelBarButton" destination="atT-ML-Zxb" id="wHi-ke-seg"/>
+                        <outlet property="confirmPasswordTextField" destination="Mlo-ux-Nk9" id="gSq-TT-OfR"/>
+                        <outlet property="navigationBar" destination="NJm-71-uN6" id="SK8-Kt-igp"/>
+                        <outlet property="newPasswordTextField" destination="kqq-8Y-puQ" id="Gub-wx-hnd"/>
+                        <outlet property="oldPasswordTextField" destination="KkB-Vp-hBf" id="TN2-2R-taV"/>
+                        <outlet property="submitButton" destination="5BK-qI-NSV" id="nr6-g9-EzZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTd-sx-jhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

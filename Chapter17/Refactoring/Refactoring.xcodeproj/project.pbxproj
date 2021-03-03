@@ -15,6 +15,8 @@
 		0C100B7625EF478A007E269E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C100B7425EF478A007E269E /* LaunchScreen.storyboard */; };
 		0C100B8125EF478B007E269E /* RefactoringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100B8025EF478B007E269E /* RefactoringTests.swift */; };
 		0C100B8C25EF478B007E269E /* RefactoringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100B8B25EF478B007E269E /* RefactoringUITests.swift */; };
+		0C100B9D25EF4AD4007E269E /* PasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100B9C25EF4AD4007E269E /* PasswordChanger.swift */; };
+		0C100BA225EF4B55007E269E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BA125EF4B55007E269E /* ChangePasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0C100B8725EF478B007E269E /* RefactoringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefactoringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C100B8B25EF478B007E269E /* RefactoringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactoringUITests.swift; sourceTree = "<group>"; };
 		0C100B8D25EF478B007E269E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C100B9C25EF4AD4007E269E /* PasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChanger.swift; sourceTree = "<group>"; };
+		0C100BA125EF4B55007E269E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				0C100B7225EF478A007E269E /* Assets.xcassets */,
 				0C100B7425EF478A007E269E /* LaunchScreen.storyboard */,
 				0C100B7725EF478A007E269E /* Info.plist */,
+				0C100B9C25EF4AD4007E269E /* PasswordChanger.swift */,
+				0C100BA125EF4B55007E269E /* ChangePasswordViewController.swift */,
 			);
 			path = Refactoring;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 				0C100B6E25EF4786007E269E /* ViewController.swift in Sources */,
 				0C100B6A25EF4786007E269E /* AppDelegate.swift in Sources */,
 				0C100B6C25EF4786007E269E /* SceneDelegate.swift in Sources */,
+				0C100BA225EF4B55007E269E /* ChangePasswordViewController.swift in Sources */,
+				0C100B9D25EF4AD4007E269E /* PasswordChanger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
