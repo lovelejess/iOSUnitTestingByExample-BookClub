@@ -18,6 +18,7 @@
 		0C100B9D25EF4AD4007E269E /* PasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100B9C25EF4AD4007E269E /* PasswordChanger.swift */; };
 		0C100BA225EF4B55007E269E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BA125EF4B55007E269E /* ChangePasswordViewController.swift */; };
 		0C100BA725EF4D2C007E269E /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BA625EF4D2C007E269E /* TestHelpers.swift */; };
+		0C100BAC25EF4D93007E269E /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C100BAB25EF4D93007E269E /* MockPasswordChanger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0C100B9C25EF4AD4007E269E /* PasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChanger.swift; sourceTree = "<group>"; };
 		0C100BA125EF4B55007E269E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		0C100BA625EF4D2C007E269E /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		0C100BAB25EF4D93007E269E /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				0C100B8025EF478B007E269E /* RefactoringTests.swift */,
 				0C100B8225EF478B007E269E /* Info.plist */,
 				0C100BA625EF4D2C007E269E /* TestHelpers.swift */,
+				0C100BAB25EF4D93007E269E /* MockPasswordChanger.swift */,
 			);
 			path = RefactoringTests;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				0C100B8125EF478B007E269E /* RefactoringTests.swift in Sources */,
 				0C100BA725EF4D2C007E269E /* TestHelpers.swift in Sources */,
+				0C100BAC25EF4D93007E269E /* MockPasswordChanger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
