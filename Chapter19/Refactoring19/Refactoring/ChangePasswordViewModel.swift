@@ -16,23 +16,24 @@ struct ChangePasswordViewModel {
     let confirmationPasswordDoesNotMatchMessage: String
     let successMessage: String
     let okButtonLabel: String
-    var isCancelButtonEnabled = true
-    var isBlurViewShowing = false
-    var isActivityIndicatorShowing = false
-    var oldPassword = ""
-    var newPassword = ""
-    var confirmPassword = ""
-    var inputFocus: InputFocus = .noKeyboard
-
-    enum InputFocus {
-        case noKeyboard
-        case oldPassword
-        case newPassword
-        case confirmPassword
+    #if false
+    var oldPassword: String {
+        get { passwordInputs.oldPassword }
+        set { passwordInputs.oldPassword = newValue }
     }
+    #endif
+    #if false
+    var passwordInputs = PasswordInputs()
+    #endif
+    
+    #if false
+    typealias InputFocus = Refactoring.InputFocus
+    #endif
 
-    var isOldPasswordEmpty: Bool { oldPassword.isEmpty }
-    var isNewPasswordEmpty: Bool { newPassword.isEmpty }
-    var isNewPasswordTooShort: Bool { newPassword.count < 6 }
-    var isConfirmPasswordMismatched: Bool { confirmPassword != newPassword }
+    #if false
+    var isOldPasswordEmpty: Bool { passwordInputs.oldPassword.isEmpty }
+    #endif
+    #if false
+    var isOldPasswordEmpty: Bool { passwordInputs.isOldPasswordEmpty }
+    #endif
 }

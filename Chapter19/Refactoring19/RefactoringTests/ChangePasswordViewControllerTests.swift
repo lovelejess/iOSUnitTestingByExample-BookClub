@@ -17,11 +17,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        sut = storyboard.instantiateViewController(
-                identifier: String(describing: ChangePasswordViewController.self))
-        #if false
-        sut.viewModel = ChangePasswordViewModel()
-        #endif
+        sut = storyboard.instantiateViewController(identifier: String(describing: ChangePasswordViewController.self))
         sut.viewModel = ChangePasswordViewModel(
                 title: "Change Password",
                 oldPasswordPlaceholder: "Current Password",
@@ -106,9 +102,6 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     }
 
     func test_tappingCancel_withFocusOnOldPassword_shouldResignThatFocus() {
-        #if false
-        putFocusOn(textField: sut.oldPasswordTextField)
-        #endif
         putFocusOn(.oldPassword)
         XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder, "precondition")
 
@@ -580,9 +573,17 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         sut.confirmPasswordTextField.text = "abcdef"
     }
     
+    #if false
     private func putFocusOn(_ inputFocus: ChangePasswordViewModel.InputFocus) {
         putInViewHierarchy(sut)
         sut.viewModel.inputFocus = inputFocus
+        sut.updateInputFocus(inputFocus)
+    }
+    #endif
+
+    private func putFocusOn(_ inputFocus: InputFocus) {
+        putInViewHierarchy(sut)
+        sut.updateInputFocus(inputFocus)
     }
 
     private func verifyAlertPresented(
